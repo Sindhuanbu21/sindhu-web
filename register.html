@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+
+    <script>
+        function validateForm() {
+
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+
+            if (name == "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Please enter your email.");
+                return false;
+            }
+
+            alert("Thank you for your feedback!");
+            return true;
+        }
+    </script>
+
+</head>
+
+<body bgcolor="white">
+
+<center>
+    <h2>Contact Us</h2>
+</center>
+
+<form name="contactForm" onsubmit="return validateForm()">
+
+<table cellpadding="8">
+
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name"></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email" name="email"></td>
+</tr>
+
+<tr>
+<td>Phone:</td>
+<td><input type="tel" name="phone"></td>
+</tr>
+
+<tr>
+<td>Favorite Art Style:</td>
+<td>
+<select name="style">
+<option>Digital Art</option>
+<option>Abstract Art</option>
+<option>Modern Art</option>
+<option>Photography</option>
+<option>Sculpture</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Message:</td>
+<td>
+<textarea rows="5" cols="25"></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
